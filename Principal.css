@@ -183,7 +183,7 @@ body {
 }
 
 .services-content p {
-    font-size: 16px;
+    font-size: 20px;
     color: #c5c5c5;
     margin-bottom: 50px;
     padding: 0 100px;
@@ -220,7 +220,7 @@ body {
 }
 
 .General-2 {
-    background-image: url(img/coffe-1.jpg);
+    background-image: url(img/coffee\ india2.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -228,7 +228,7 @@ body {
 }
 
 .General-3 {
-    background-image: url(img/coffee-2.jpg);
+    background-image: url(img/coffee\ india.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -236,8 +236,8 @@ body {
 }
 
 h2 {
-    font-size: 55px;
-    line-height: 70%;
+    font-size: 45px;
+    line-height: 85%;
     color: #323337;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -334,7 +334,7 @@ p {
     }
 
     .menu label {
-        display: inline;
+        display: initial;
     }
 
     .menu .navbar {
@@ -350,8 +350,8 @@ p {
         width: 100%;
     }
 
-    #menu:checked ~ , .navbar{
-        display: inline;
+    #menu:checked ~ .navbar {
+        display: initial;
     }
 
     .header{
