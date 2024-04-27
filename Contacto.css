@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@400;500;600;700;800&display=swap');
+/*Fuente de letra de google fonts*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(
+        rgba(0, 0, 0, 0.107),
+        rgba(0, 0, 0, 0.105)),
+        url(img/blog-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+form {
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 340;
+    background: #ffffff;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+h2 {
+    color: #000000;
+    font-size: 35px;
+}
+
+label {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #e6eae7;
+    border: 2px solid #e6eae6;
+    color: #000000;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #7d7c7c;
+}
+
+.form-txt {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+/*Cambio de espacio y color de los terminos*/
+.form-txt a {
+    color: #b47c1c;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffff;
+    border: 0;
+    border-radius: 25px;
+    background-color: #eabb22;
+    box-shadow: 0 0 20px rgba(190, 157, 27, 0.4);
+    cursor: pointer;
+}
+/*Color del boton al clickear*/
+.btn:hover {
+    background-color: #e5a331;
+}
+
+.btn-2 {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffff;
+    border: 0;
+    border-radius: 25px;
+    background-color: #eabb22;
+    box-shadow: 0 0 20px rgba(190, 157, 27, 0.4);
+    cursor: pointer;
+    width: 50%;
+}
+/*Color del boton al clickear*/
+.btn-2:hover {
+    background-color: #e5a331;
+    width: 50%;
+}
+
+
+@media(max-width:991px) {
+    body {
+        padding: 30px;
+    }
+
+    form {
+        padding: 50px 30px;
+        width: 100%;
+    }
+
+    input {
+        padding: 15px;
+    }
+
+}

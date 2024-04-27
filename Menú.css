@@ -1,167 +1,326 @@
-@import url('https://fonts.googleapis.com/css2?family=poppins:wght@400;500;600;700;800&display=swap');
-/*Fuente de letra de google fonts*/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+	--primary-color: #c7a17a;
+	--background-color: #f9f5f0;
+	--dark-color: #151515;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
+html {
+	font-size: 62.5%;
+	font-family: 'Poppins', sans-serif;
 }
-/*Definir tamaño del contenido para centrarlo*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* ********************************** */
+/*             UTILIDADES             */
+/* ********************************** */
 .container {
-    max-width: 1200px;
-    margin:0 auto;
+	max-width: 120rem;
+	margin: 0 auto;
 }
 
-.header {
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7));
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 70vh;
-    display: flex;
-    align-items: center; 
+.heading-1 {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+/* ********************************** */
+/*               HEADER               */
+/* ********************************** */
+.container-hero {
+	background-color: var(--background-color);
+}
+
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2rem 0;
+}
+
+.customer-support {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+}
+
+.customer-support i {
+	font-size: 3.3rem;
+}
+
+.content-customer-support {
+	display: flex;
+	flex-direction: column;
+}
+
+.container-logo {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+.container-logo i {
+	font-size: 3rem;
+}
+
+.container-logo h1 a {
+	text-decoration: none;
+	color: #000;
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.container-user {
+	display: flex;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.container-user .fa-user {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-right: 2.5rem;
+	border-right: 1px solid #e2e2e2;
+}
+
+.container-user .fa-basket-shopping {
+	font-size: 3rem;
+	color: var(--primary-color);
+	padding-left: 1rem;
+}
+
+.content-shopping-cart {
+	display: flex;
+	flex-direction: column;
+}
+
+/* ************* NAVBAR ************* */
+.container-navbar {
+	background-color: var(--primary-color);
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.navbar .fa-bars {
+	display: none;
 }
 
 .menu {
-    position: absolute;
-    top:  0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+	display: flex;
+	gap: 2rem;
 }
 
-.logo {
-    color: #FFFDFC;
-    font-size: 25px;
-    font-weight: 800;
+.menu li {
+	list-style: none;
 }
 
-.menu .navbar ul li {
-    position: relative;
-    float: left;
+.menu a {
+	text-decoration: none;
+	font-size: 1.3rem;
+	color: var(--dark-color);
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
 }
 
-.menu .navbar ul li a {
-    font-size: 18px;
-    padding: 20px;
-    color: #FFFDFC;
-    display: block;
-    font-weight: 600;
-}
-/*Cambia el color de las letras en la barra*/
-.menu .navbar ul li a:hover{
-    color: #CE967B;
-}
-
-#menu {
-    display: none;
+.menu a::after {
+	content: '';
+	width: 1.5rem;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -3px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	opacity: 0;
+	transition: all 0.3s ease;
 }
 
-.menu-icono {
-    width: 25px;
+.menu a:hover::after {
+	opacity: 1;
 }
 
-.menu label {
-    cursor: pointer;
-    display: none;
-}
-/*Color del footer*/
-.pie-pagina{
-    width: 100%;
-    background-color: #010202;
+.menu a:hover {
+	color: #fff;
 }
 
-.pie-pagina .grupo-1{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
-    padding: 45px 0px;
+.search-form {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border: 2px solid #fff;
+	border-radius: 2rem;
+	background-color: #fff;
+	height: 4.4rem;
+	overflow: hidden;
 }
 
-.pie-pagina .grupo-1 .texto-pie figure{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.search-form input {
+	outline: none;
+	font-family: inherit;
+	border: none;
+	width: 25rem;
+	font-size: 1.4rem;
+	padding: 0 2rem;
+	color: #777;
+	cursor: pointer;
 }
 
-.pie-pagina .grupo-1 .img-pie figure img{
-    width: 250px;
+.search-form input::-webkit-search-cancel-button {
+	appearance: none;
 }
 
-.pie-pagina .grupo-1 .texto-pie h2{
-    color: #fff;
-    margin-bottom: 25px;
-    font-size: 20px;
+.search-form .btn-search {
+	border: none;
+	background-color: var(--primary-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 1rem;
 }
 
-.pie-pagina .grupo-1 .texto-pie p{
-    color: #efefef;
-    margin-bottom: 10px;
-    text-align: justify;
+.btn-search i {
+	font-size: 2rem;
+	color: #fff;
 }
 
-.pie-pagina .grupo-1 .red-social a{
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    margin-right: 10px;
-    background-color: #0d2033;
+form {
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
     text-align: center;
-    transition: all 300ms ease;
+    width: 340;
+    background: #ffffff;
 }
 
-.pie-pagina .grupo-1 .red-social a:hover{
-    color: aqua;
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
 
-/*Acomodar pagina a pantalla movil*/
-@media(max-width:991px) {
+h2 {
+    color: #000000;
+    font-size: 35px;
+}
 
-    .menu {
+label {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+    background-color: #e6eae7;
+    border: 2px solid #e6eae6;
+    color: #000000;
+    outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #7d7c7c;
+}
+
+.form-txt {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+/*Cambio de espacio y color de los terminos*/
+.form-txt a {
+    color: #b47c1c;
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.btn {
+    font-size: 16px;
+    color: #ffff;
+    border: 0;
+    border-radius: 25px;
+    background-color: #eabb22;
+    box-shadow: 0 0 20px rgba(190, 157, 27, 0.4);
+    cursor: pointer;
+}
+/*Color del boton al clickear*/
+.btn:hover {
+    background-color: #e5a331;
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 768px       */
+/* ********************************** */
+@media (max-width: 768px) {
+	html {
+		font-size: 55%;
+	}
+
+	.hero {
+		padding: 2rem;
+	}
+
+	.customer-support {
+		display: none;
+	}
+
+	.content-shopping-cart {
+		display: none;
+	}
+
+	.navbar {
+		padding: 1rem 2rem;
+	}
+
+	.navbar .fa-bars {
+		display: block;
+		color: #fff;
+		font-size: 3rem;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		margin: 0 auto;
+		padding: 25rem 0;
+	}
+
+	.container-features {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 3rem 2rem;
+	}
+    
+    body {
         padding: 30px;
     }
 
-    .menu label {
-        display: initial;
-    }
-
-    .menu .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: #323337;
-        display: none;
-    }
-
-    .menu .navbar ul li {
+    form {
+        padding: 50px 30px;
         width: 100%;
     }
 
-    #menu:checked ~ .navbar {
-        display: initial;
+    input {
+        padding: 15px;
     }
-    .pie-pagina .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 35px 0px;
-    }
-
 }
