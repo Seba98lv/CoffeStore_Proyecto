@@ -155,7 +155,7 @@ p {
 .header-img img {
     width: 400px;
 }
-
+/*ofertas de productos premium*/
 .ofertas {
     padding: 100px 0;
     display: flex;
@@ -181,7 +181,7 @@ p {
     font-weight: 600;
     color: #e89b1f;
 }
-
+/*Centre los productos destacados pero aun falta completar la tienda*/
 .productos {
     padding: 0 0 100px 0;
     text-align: center;

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@400;500;600;700;800&display=swap');
+/*Fuente de letra de google fonts*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background:linear-gradient(
+        rgba(0, 0, 0, 0.107),
+        rgba(0, 0, 0, 0.105)),
+        url(img/blog-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+form {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    background-color: #eeee;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #2e2e2e;
+    margin-bottom: 25px;
+}
+
+label, p {
+    font-size: 17px;
+    color: #575757;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 17px 11px;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    background-color: #fafafc;
+    outline: none;
+    color: #000000;
+    font-size: 17px;
+}
+
+.btn-1 {
+    background-color: #000000;
+    font-size: 15px;
+    color: #edaa45;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn-1:hover {
+    background-color: #f2a32d;
+}
+
+.pregunta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+@media (max-width:991px) {
+
+    body {
+        padding: 30px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .remember {
+        flex-direction: column;
+    }
+}
+
+
