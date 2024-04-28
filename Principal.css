@@ -95,15 +95,19 @@ body {
 }
 /*Boton de navegacion*/
 .btn-1 {
-    display: inline-block;
-    padding: 11px 35px;
-    background-color: #dc7e4e;
-    color: #F9FAFC;
-    text-transform: uppercase;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffff;
+    border: 0;
+    border-radius: 25px;
+    background-color: #ebad8d;
+    box-shadow: 0 0 20px rgba(190, 157, 27, 0.4);
+    cursor: pointer;
+    width: 50%;
 }
 
 .btn-1:hover {
-    background-color: #ebad8d;
+    background-color: #e7824f;
 }
 
 .coffee {
@@ -207,7 +211,7 @@ body {
 }
 
 .servicio-1 h3 {
-    color: #eaccb3;
+    color: #ebad8d;
     font-size: 18px;
     text-align: justify;
 }
@@ -325,13 +329,13 @@ p {
     line-height: 45px;
     color: #fff;
     margin-right: 10px;
-    background-color: #0d2033;
+    background-color: #25272a;
     text-align: center;
     transition: all 300ms ease;
 }
 
 .pie-pagina .grupo-1 .red-social a:hover{
-    color: aqua;
+    color: #CE967B;
 }
 
 
